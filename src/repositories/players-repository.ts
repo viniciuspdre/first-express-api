@@ -1,10 +1,11 @@
+import path from "path"
+import fs from "fs"
 import { PlayerModel } from "../models/player-model"
 
+const pathData = path.join(__dirname, "../data/players-data.json")
 
-const database: PlayerModel[] = [
-  {id: 1, name: "Messi"},
-  {id: 2, name: "Ronaldo"},
-]
+const language = "utf-8"
+const database: PlayerModel[] = JSON.parse(fs.readFileSync(pathData, language))
 
 export const findAllPlayers = async (): Promise<PlayerModel[]> => {
   return database
