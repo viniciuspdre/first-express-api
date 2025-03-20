@@ -1,5 +1,5 @@
 import path from "path"
-import fs from "fs"
+import fs, { write } from "fs"
 import { PlayerModel } from "../models/player-model"
 
 const pathData = path.join(__dirname, "../data/players-data.json")
@@ -19,4 +19,23 @@ export const findPlayerById = async (id: number): Promise<PlayerModel | undefine
 export const insertPlayer = async (player: PlayerModel) => {
   database.push(player)
   fs.writeFileSync(pathData, JSON.stringify(database, null, 2), language)
+}
+
+export const deletePlayerById = async (id: number) => {
+  const index = database.findIndex(player => player.id === id)
+  database.splice(index, 1)
+
+  fs.writeFileSync(pathData, JSON.stringify(database, null, 2), language)
+}
+
+export const updatePlayerById = async (id: number, values: StatisticsModel) => {
+  const playerIndex = database.findIndex(p => p.id === id)
+
+  if(playerIndex !== -1) {
+    database[playerIndex].statistics = values
+    fs.writeFileSync(pathData, JSON.stringify(database, null, 2), language)
+    return database[playerIndex]
+  }
+  
+  return null
 }

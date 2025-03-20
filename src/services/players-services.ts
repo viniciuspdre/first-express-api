@@ -1,6 +1,6 @@
 import { HttpResponse } from "../models/http-response-model"
 import { PlayerModel } from "../models/player-model"
-import { findAllPlayers, findPlayerById, insertPlayer } from "../repositories/players-repository"
+import { deletePlayerById, findAllPlayers, findPlayerById, insertPlayer, updatePlayerById } from "../repositories/players-repository"
 import * as HttpRes from "../utils/http-helper"
 
 
@@ -32,8 +32,31 @@ export const insertPlayerService = async (player: PlayerModel): Promise<HttpResp
   
   if(Object.keys(player).length !== 0) {
     insertPlayer(player)
-    return await HttpRes.ok(player)
+    return await HttpRes.created("You inserted your player successfully!")
   } else {
     return await HttpRes.badRequest()
   }
+}
+
+export const deletePlayerByIdService = async (id: number): Promise<HttpResponse> => {
+  const data = await findPlayerById(id)
+
+  if(data === undefined) {
+    return await HttpRes.notFound()
+  }
+
+  deletePlayerById(id)
+  return await HttpRes.ok("Deletado com sucesso")
+}
+
+export const updatePlayerByIdService = async (id: number, values: StatisticsModel): Promise<HttpResponse> => {
+
+  const returnValue = await updatePlayerById(id, values)
+
+  if(returnValue !== null) {
+    return await HttpRes.ok({message: "Atualizado com sucesso"})
+  }
+
+  return HttpRes.notFound()
+  
 }

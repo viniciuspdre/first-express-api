@@ -184,19 +184,19 @@
     }
   },
   {
-    "id": 99,
-    "name": "Pedro Lira",
+    "id": 101,
+    "name": "Antonio Victor",
     "club": "Calango FC",
     "nationality": "Brasileiro",
-    "position": "Volante",
+    "position": "Zagueiro",
     "statistics": {
-      "Overall": 82,
-      "Pace": 79,
-      "Shooting": 89,
+      "Overall": 87,
+      "Pace": 72,
+      "Shooting": 92,
       "Passing": 71,
       "Dribbling": 69,
       "Defending": 92,
-      "Physical": 88
+      "Physical": 97
     }
   }
 ]
