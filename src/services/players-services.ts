@@ -19,6 +19,12 @@ export const getPlayerService = async (): Promise<HttpResponse> => {
 }
 
 export const getPlayerByIdService = async (id: number): Promise<HttpResponse> => {
+
+  if(!Number.isInteger(id) || id <= 0) {
+    HttpRes.badRequest("Id inválido")
+  }
+
+
   const data = await findPlayerById(id)
 
   if(data === undefined) {
@@ -39,6 +45,11 @@ export const insertPlayerService = async (player: PlayerModel): Promise<HttpResp
 }
 
 export const deletePlayerByIdService = async (id: number): Promise<HttpResponse> => {
+
+  if(!Number.isInteger(id) || id <= 0) {
+    HttpRes.badRequest("Id inválido")
+  }
+
   const data = await findPlayerById(id)
 
   if(data === undefined) {
@@ -49,9 +60,13 @@ export const deletePlayerByIdService = async (id: number): Promise<HttpResponse>
   return await HttpRes.ok("Deletado com sucesso")
 }
 
-export const updatePlayerByIdService = async (id: number, values: StatisticsModel): Promise<HttpResponse> => {
+export const updatePlayerByIdService = async (id: number, statistics: StatisticsModel): Promise<HttpResponse> => {
 
-  const returnValue = await updatePlayerById(id, values)
+  if(!Number.isInteger(id) || id <= 0) {
+    HttpRes.badRequest("Id inválido")
+  }
+
+  const returnValue = await updatePlayerById(id, statistics)
 
   if(returnValue !== null) {
     return await HttpRes.ok({message: "Atualizado com sucesso"})

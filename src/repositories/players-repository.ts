@@ -28,14 +28,13 @@ export const deletePlayerById = async (id: number) => {
   fs.writeFileSync(pathData, JSON.stringify(database, null, 2), language)
 }
 
-export const updatePlayerById = async (id: number, values: StatisticsModel) => {
+export const updatePlayerById = async (id: number, statistics: StatisticsModel) => {
   const playerIndex = database.findIndex(p => p.id === id)
 
   if(playerIndex !== -1) {
-    database[playerIndex].statistics = values
+    database[playerIndex].statistics = statistics
     fs.writeFileSync(pathData, JSON.stringify(database, null, 2), language)
-    return database[playerIndex]
   }
   
-  return null
+  return database[playerIndex]
 }

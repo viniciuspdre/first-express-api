@@ -19,6 +19,6 @@ router.delete("/players/:id", deletePlayer)
 
 // "update"
 
-router.patch("/player/:id", updatePlayer)
+router.patch("/players/:id", updatePlayer)
 
 export default router
