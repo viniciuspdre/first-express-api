@@ -182,5 +182,21 @@
       "Defending": 70,
       "Physical": 78
     }
+  },
+  {
+    "id": 99,
+    "name": "Pedro Lira",
+    "club": "Calango FC",
+    "nationality": "Brasileiro",
+    "position": "Volante",
+    "statistics": {
+      "Overall": 82,
+      "Pace": 79,
+      "Shooting": 89,
+      "Passing": 71,
+      "Dribbling": 69,
+      "Defending": 92,
+      "Physical": 88
+    }
   }
 ]

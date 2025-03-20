@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getPlayer, getPlayerById } from "../controllers/players-controller";
+import { getPlayer, getPlayerById, postPlayer } from "../controllers/players-controller";
 
 
 const router = Router()
@@ -11,6 +11,6 @@ router.get("/players/:id", getPlayerById)
 
 // "inserts"
 
-router.post("/players")
+router.post("/players", postPlayer)
 
 export default router
