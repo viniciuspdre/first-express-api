@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { deletePlayer, getPlayer, getPlayerById, postPlayer, updatePlayer } from "../controllers/players-controller";
+import { getClubs } from "../controllers/clubs-controller";
 
 
 const router = Router()
@@ -8,6 +9,7 @@ const router = Router()
 
 router.get("/players", getPlayer)
 router.get("/players/:id", getPlayerById)
+router.get("/clubs", getClubs)
 
 // "inserts"
 

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Real Madrid",
+    "country": "Spain",
+    "league": "La Liga",
+    "stadium": "Santiago Bernabéu",
+    "titles": {
+      "ChampionsLeague": 14,
+      "LeagueTitles": 35,
+      "DomesticCups": 20
+    }
+  },
+  {
+    "id": 2,
+    "name": "Manchester City",
+    "country": "England",
+    "league": "Premier League",
+    "stadium": "Etihad Stadium",
+    "titles": {
+      "ChampionsLeague": 1,
+      "LeagueTitles": 9,
+      "DomesticCups": 14
+    }
+  },
+  {
+    "id": 3,
+    "name": "Bayern Munich",
+    "country": "Germany",
+    "league": "Bundesliga",
+    "stadium": "Allianz Arena",
+    "titles": {
+      "ChampionsLeague": 6,
+      "LeagueTitles": 33,
+      "DomesticCups": 20
+    }
+  },
+  {
+    "id": 4,
+    "name": "Paris Saint-Germain",
+    "country": "France",
+    "league": "Ligue 1",
+    "stadium": "Parc des Princes",
+    "titles": {
+      "ChampionsLeague": 0,
+      "LeagueTitles": 11,
+      "DomesticCups": 15
+    }
+  },
+  {
+    "id": 5,
+    "name": "Barcelona",
+    "country": "Spain",
+    "league": "La Liga",
+    "stadium": "Spotify Camp Nou",
+    "titles": {
+      "ChampionsLeague": 5,
+      "LeagueTitles": 27,
+      "DomesticCups": 31
+    }
+  },
+  {
+    "id": 6,
+    "name": "Liverpool",
+    "country": "England",
+    "league": "Premier League",
+    "stadium": "Anfield",
+    "titles": {
+      "ChampionsLeague": 6,
+      "LeagueTitles": 19,
+      "DomesticCups": 16
+    }
+  },
+  {
+    "id": 7,
+    "name": "AC Milan",
+    "country": "Italy",
+    "league": "Serie A",
+    "stadium": "San Siro",
+    "titles": {
+      "ChampionsLeague": 7,
+      "LeagueTitles": 19,
+      "DomesticCups": 5
+    }
+  },
+  {
+    "id": 8,
+    "name": "Juventus",
+    "country": "Italy",
+    "league": "Serie A",
+    "stadium": "Allianz Stadium",
+    "titles": {
+      "ChampionsLeague": 2,
+      "LeagueTitles": 36,
+      "DomesticCups": 14
+    }
+  },
+  {
+    "id": 9,
+    "name": "Chelsea",
+    "country": "England",
+    "league": "Premier League",
+    "stadium": "Stamford Bridge",
+    "titles": {
+      "ChampionsLeague": 2,
+      "LeagueTitles": 6,
+      "DomesticCups": 8
+    }
+  },
+  {
+    "id": 10,
+    "name": "Borussia Dortmund",
+    "country": "Germany",
+    "league": "Bundesliga",
+    "stadium": "Signal Iduna Park",
+    "titles": {
+      "ChampionsLeague": 1,
+      "LeagueTitles": 8,
+      "DomesticCups": 5
+    }
+  }
+]
