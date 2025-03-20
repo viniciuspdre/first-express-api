@@ -198,5 +198,21 @@
       "Defending": 99,
       "Physical": 99
     }
+  },
+  {
+    "id": 102,
+    "name": "Helio Lira",
+    "club": "Calango FC",
+    "nationality": "Brasileiro",
+    "position": "Atacante",
+    "statistics": {
+      "Overall": 99,
+      "Pace": 93,
+      "Shooting": 99,
+      "Passing": 89,
+      "Dribbling": 86,
+      "Defending": 44,
+      "Physical": 88
+    }
   }
 ]

@@ -9,7 +9,7 @@ export const getPlayerService = async (): Promise<HttpResponse> => {
   const data = await findAllPlayers()
   let response = null
   
-  if(Object.keys(data).length == 0) {
+  if(data) {
     response = await HttpRes.ok(data)
   } else {
     response = await HttpRes.noContent()
